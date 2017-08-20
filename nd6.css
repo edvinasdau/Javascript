@@ -1,0 +1,36 @@
+.head {
+	background: orange;
+	color: black;
+	padding: 50px;
+}
+.rem {
+	border: solid red 3px;
+	padding: 10px;
+	font-size: 300%;
+	color: black;
+	margin: 30px;
+}
+.ap {
+	border: solid red 3px;
+	padding: 10px;
+	padding-top: 125px;
+	font-size: 300%;
+	color: black;
+	margin: 30px;
+	text-align: center;
+}
+.button {
+	margin: 180px;
+}
+.pirm {
+	background-color: red;
+}
+.antr {
+	background-color: red;
+}
+.tre {
+	background-color: red;
+}
+.ketv {
+	background-color: red;
+}

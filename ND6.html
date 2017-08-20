@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript ND, 6 paskaita</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="nd6.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row head">
+			<h1>JavaScript namu darbas, 6 paskaita</h1>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-2">
+				<div class="rem">1</div>
+				<div class="rem">2</div>
+				<div class="rem">3</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="rem">4</div>
+				<div class="rem">5</div>
+				<div class="rem">6</div>
+			</div>
+			<div class="col-lg-2">
+				<div class="rem">7</div>
+				<div class="rem">8</div>
+				<div class="rem">9</div>
+			</div>
+			<div class="col-lg-4 ap">10 !
+			</div>
+			<div class="col-lg-1">
+				<button onclick="calc()" class="button btn btn-lg btn-outline-danger">Spausk!</button>
+			</div>
+			<div id="rez"></div>
+		</div>
+	</div>
+</body>
+</html>
+	<script type="text/javascript">
+		var random;
+		function calc() {
+			random = Math.round(Math.random() *10);
+			document.getElementById("rez").innerHTML = "Rezultatas yra " + random;
+			document.getElementById('rez').style.backgroundColor = "red";
+		}
+	</script>
