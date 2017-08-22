@@ -22,15 +22,15 @@
 .button {
 	margin: 180px;
 }
-.pirm {
-	background-color: red;
+
+#lucky_numbers {
+	background-color: pink;
 }
-.antr {
-	background-color: red;
-}
-.tre {
-	background-color: red;
-}
-.ketv {
-	background-color: red;
+#lskaicius {
+	background-color: aqua;
+	font-size: 300%;
+	color: blue;
+	border: solid black 2px;
+	padding: 50px;
+
 }

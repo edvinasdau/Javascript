@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript ND, 6 paskaita</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="nd6.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row head">
+			<h1>JavaScript namu darbas, 6 paskaita</h1>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+				<div id="lucky_numbers">None</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-2">
+				<div id="0" class="rem">0</div>
+				<div id="1" class="rem">1</div>
+				<div id="2" class="rem">2</div>
+				<div id="3" class="rem">3</div>
+			</div>
+			<div class="col-lg-2">
+				<div id="4" class="rem">4</div>
+				<div id="5" class="rem">5</div>
+				<div id="6" class="rem">6</div>
+			</div>
+			<div class="col-lg-2">
+				<div id="7" class="rem">7</div>
+				<div id="8" class="rem">8</div>
+				<div id="9" class="rem">9</div>
+			<div class="col-lg-1">
+		<div class="row">
+			<div id="lskaicius" class="">0</div>
+
+				<button onclick="get_number()" class="button btn btn-lg btn-outline-danger">Spausk!</button></br>
+				<button onclick="new_game()" class="button btn btn-lg btn-outline-danger">naujas zaidimas</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+	<script type="text/javascript">
+
+	var lucky = [];
+	var gameover = false;
+	var div_lucky_numbers = document.getElementById("lucky_numbers");
+
+		function get_number() {
+
+			if (!gameover) { //gameover == false
+			clear_table();
+
+			var skaicius;
+			skaicius = Math.floor(Math.random() * 10);
+			document.getElementById(skaicius).style.backgroundColor = "red";
+
+			lucky.push(skaicius);
+			div_lucky_numbers.innerHTML = lucky;
+
+			check_gameover();
+
+		}
+}
+
+
+function clear_table() {
+	for (var i = 0; i <= 9; i++) {
+				document.getElementById(i).style.backgroundColor = "white";
+	}
+}
+
+function check_gameover() {
+	if (lucky.length < 8) {
+		//zaidimas tesiasi jei masyvas maznesnis uz 8
+	} else {
+		alert("Game is over");
+		gameover = true;
+	}
+}
+function new_game() {
+
+	if (gameover) {
+	div_lucky_numbers.innerHTML = "";
+	gameover = false;
+	lucky = [];
+} else {
+	alert("game is not over yet!");
+}
+}
+	</script>
+	<!-- round apvalina nuo , 1.5 iki 2, aukstesne puse. floor apvalina 1.5 iki 1. ; ceil apvalina 1.1 i 2;-->
