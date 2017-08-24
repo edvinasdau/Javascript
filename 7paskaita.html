@@ -14,7 +14,11 @@
 	</div>
 	<div class="container">
 		<div class="row">
+			<div id="lucky_numbers">None</div>
+		</div>
+		<div class="row">
 			<div class="col-lg-2">
+				<div id="0" class="rem">0</div>
 				<div id="1" class="rem">1</div>
 				<div id="2" class="rem">2</div>
 				<div id="3" class="rem">3</div>
@@ -30,7 +34,7 @@
 				<div id="9" class="rem">9</div>
 			</div>
 			<div class="col-lg-1">
-				<button onclick="show()" class="button btn btn-lg btn-outline-danger">Spausk!</button>
+				<button onclick="get_number()" class="button btn btn-lg btn-outline-danger">Spausk!</button>
 			</div>
 		</div>
 	</div>
@@ -38,16 +42,40 @@
 </html>
 	<script type="text/javascript">
 
-		function show() {
+	var lucky = [];
+	var gameover = false;
 
-			var id;
-			id = Math.floor(Math.random() * 9)+1;
+		function get_number() {
 
-			for (var i = 1; i <= 9; i++) {
-				document.getElementById(i).style.backgroundColor = "white";
-			}
-			
-			document.getElementById(id).style.backgroundColor = "red";
+			if (!gameover) {
+			clear_table();
+
+			var skaicius;
+			skaicius = Math.floor(Math.random() * 10);
+			document.getElementById(skaicius).style.backgroundColor = "red";
+
+			lucky.push(skaicius);
+
+			document.getElementById("lucky_numbers").innerHTML = lucky;
+
+			check_gameover();
 		}
+}
+
+
+function clear_table() {
+	for (var i = 0; i <= 9; i++) {
+				document.getElementById(i).style.backgroundColor = "white";
+	}
+}
+
+function check_gameover() {
+	if (lucky.length < 8) {
+		//zaidimas tesiasi jei masyvas maznesnis uz 8
+	} else {
+		alert("Game is over");
+		gameover = true;
+	}
+}
 	</script>
 	<!-- round apvalina nuo , 1.5 iki 2, aukstesne puse. floor apvalina 1.5 iki 1. ; ceil apvalina 1.1 i 2;-->

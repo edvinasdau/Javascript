@@ -20,17 +20,23 @@
 	text-align: center;
 }
 .button {
-	margin: 180px;
+	margin: 30px;
 }
-.pirm {
-	background-color: red;
+
+#lucky_numbers {
+	background-color: pink;
 }
-.antr {
-	background-color: red;
+.ls {
+	background-color: aqua;
+	font-size: 300%;
+	color: blue;
+	border: solid black 2px;
+	padding: 50px;
+
 }
-.tre {
-	background-color: red;
-}
-.ketv {
-	background-color: red;
+.bilietas {
+	background-color: pink;
+	margin: 20px;
+	border: solid blue 5px;
+	font-size: 200%;
 }

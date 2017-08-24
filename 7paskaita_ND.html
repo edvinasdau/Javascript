@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript ND, 6 paskaita</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="nd6.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row head">
+			<h1>JavaScript namu darbas, 6 paskaita</h1>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+				<div class="bilietas" id="ticket">Bilietas</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-2">
+				<div id="0" class="rem">0</div>
+				<div id="1" class="rem">1</div>
+				<div id="2" class="rem">2</div>
+				<div id="3" class="rem">3</div>
+			</div>
+			<div class="col-lg-2">
+				<div id="4" class="rem">4</div>
+				<div id="5" class="rem">5</div>
+				<div id="6" class="rem">6</div>
+			</div>
+			<div class="col-lg-2">
+				<div id="7" class="rem">7</div>
+				<div id="8" class="rem">8</div>
+				<div id="9" class="rem">9</div>
+			<div class="col-lg-1">
+		<div class="row">
+			<div id="lskaicius" class="ls">Laimingi skaiciai</div>
+
+				<button onclick="get_number()" class="button btn btn-lg btn-outline-danger">Gauk bilieta</button></br>
+				<button onclick="lskaiciai()" class="button btn btn-lg btn-outline-danger">Laimingi skaiciai</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+	<script type="text/javascript">
+
+	var ticket = [];
+	var bil_gautas = false;
+	var div_ticket = document.getElementById("ticket");
+
+		function get_number() {
+
+			if (!bil_gautas) { //gameover == false
+			clear_table();
+
+			var skaicius;
+			skaicius = Math.floor(Math.random() * 10);
+			document.getElementById(skaicius).style.backgroundColor = "red";
+
+			ticket.push(skaicius);
+			div_ticket.innerHTML = ticket;
+
+			check_bil_gautas();
+
+		}
+}
+
+
+function clear_table() {
+	for (var i = 0; i <= 9; i++) {
+				document.getElementById(i).style.backgroundColor = "white";
+	}
+}
+
+function check_bil_gautas() {
+	if (ticket.length < 8) {
+		//zaidimas tesiasi jei masyvas maznesnis uz 8
+	} else {
+		alert("Bilieta jau gavote");
+		bil_gautas = true;
+	}
+}
+	</script>
+
+	<script type="text/javascript">
+		
+
+	var lskc = [];
+	var lskc_gautas = false;
+	var div_lskc = document.getElementById("lskaicius");
+
+	function lskaiciai() {
+
+		var skc;
+		skc = Math.floor(Math.random() * 10);
+		lskc.push(skc);
+		div_lskc.innerHTML = lskc;
+
+		check_lskc_gautas();
+}
+
+	function check_lskc_gautas() {
+		if (lskc.length < 8) {
+		} else {
+			alert ("Laimingi skaiciai iskrito");
+			lskc_gautas = true;
+			}
+		}
+	</script>
+	<!-- round apvalina nuo , 1.5 iki 2, aukstesne puse. floor apvalina 1.5 iki 1. ; ceil apvalina 1.1 i 2;-->

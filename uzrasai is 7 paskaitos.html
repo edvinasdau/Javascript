@@ -38,7 +38,11 @@
 </html>
 	<script type="text/javascript">
 
+	console.log ("start");
+
 		function show() {
+
+			clear_table();
 
 			var id;
 			id = Math.floor(Math.random() * 9)+1;
@@ -49,5 +53,62 @@
 			
 			document.getElementById(id).style.backgroundColor = "red";
 		}
+
+function clear_table() {
+	for (var i = 1; i <= 9; i++) {
+				document.getElementById(i).style.backgroundColor = "white";
+}
+
+
+
+function calculate(a, b) {
+	var c;
+	c = a + b;
+	document.getElementById(9).innerHTML = c;
+}
+
+function calculate(a, b) {
+	var c;
+	c = a + b;
+	return c;
+
+calculate (3, 7);
+var kintamasis = true; //false (binarinis kintamasis)
+	
+	var a,b,c,d,e;
+
+	a = 1;
+	b = 52;
+	c = 3453;
+	d = "tekstas"
+
+	a = array(1,52,3453, "tekstas"); //masyvas. jie randami pagal indeksa. indeksuojama nuo nulio.
+	var cars = ["bmw" "audi"]; // kitoks masyvas 
+	console.log(a[1]); //reiksme a[1] yra 52;, jei butu a[0] yra 1.
+
+	var a = 10;
+
+	a = a +1; // arba a++ , gaunasi tas pats. 
+
+			var skaicius;
+
+		skaicius = Math.floor(Math.random() * 9)+1;
+
+		if (skaicius < 5) {
+			document.getElementById(skaicius).style.backgroundColor = "red";
+		} else if (skaicius == 5) {
+				document.getElementById(skaicius).style.backgroundColor = "violet";
+		} else {
+				document.getElementById(skaicius).style.backgroundColor = "blue";
+		}
+
+
+			for (var i = 1; i <= 9; i++) {
+				document.getElementById(i).style.backgroundColor = "white";
+			}
+			
+			document.getElementById(id).style.backgroundColor = "red";
+
 	</script>
 	<!-- round apvalina nuo , 1.5 iki 2, aukstesne puse. floor apvalina 1.5 iki 1. ; ceil apvalina 1.1 i 2;-->
+
