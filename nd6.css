@@ -20,6 +20,7 @@
 	text-align: center;
 }
 .button {
+<<<<<<< HEAD
 	margin: 30px;
 }
 
@@ -27,16 +28,24 @@
 	background-color: pink;
 }
 .ls {
+=======
+	margin: 180px;
+}
+
+#lucky_numbers {
+	background-color: pink;
+}
+#lskaicius {
 	background-color: aqua;
 	font-size: 300%;
 	color: blue;
 	border: solid black 2px;
 	padding: 50px;
-
 }
 .bilietas {
 	background-color: pink;
 	margin: 20px;
 	border: solid blue 5px;
 	font-size: 200%;
+
 }
